@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <form class="mb-4">
+      <div class="form-group mx-4">
+        <label for="exampleInputEmail1">Name</label>
+        <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name" required>
+      </div>
+      <div class="form-group mx-4">
+        <label for="exampleInputPassword1">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="email" required>
+      </div>  
+         <div class="form-group mx-4">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="psw" placeholder="Password" required>
+      </div>
+     
+       
+        <input type="button" class="btn btn-success w-75 mt-4" style="margin-left:14%; height: 6vh;" value="Register" onclick="saveData()">    
+      </form>
+</body>
+<script>
+function saveData()
+    {
+    let name,email,psw;
+
+    name=document.getElementById("name").value;
+    email=document.getElementById("email").value;
+    psw=document.getElementById("psw").value;
+
+    let user_records=new Array();
+    user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+    if(user_records.some((v)=>{return v.email==email}))
+    {
+    alert("duplicate data");
+    }
+    else
+    {
+    user_records.push({
+    "name":name,
+    "email":email,
+    "psw":psw
+    })
+    localStorage.setItem("users",JSON.stringify(user_records));
+    }
+    showData();
+    }
+
+    function showData()
+    {
+    document.getElementById("showUsers").innerHTML="";
+    let user_records=new Array();
+    user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+
+    // if(user_records)
+    // {
+    //     for(let i=0;i<user_records.length;i++)
+    //     {
+    //     let addDiv=document.createElement('div');
+    // addDiv.className="row";
+    // addDiv.innerHTML='  <div class="col-sm-4" style="padding: 10px;">'+user_records[i].name+'</div><div class="col-sm-4" style="padding: 10px;">'+user_records[i].email+'</div><div class="col-sm-4" style="padding: 10px;">'+user_records[i].psw+'</div>';
+    // document.getElementById("showUsers").appendChild(addDiv);
+    //     }
+    // }
+    }
+
+// function submit()
+
+//     {
+//     let fname,lname,email,psw;
+
+//     name=document.getElementById("fname").value;
+//     lname=document.getElementById("lname").value;
+//     email=document.getElementById("mail").value;
+//     psw=document.getElementById("pass").value;
+   
+//     let user_records=new Array();
+//     user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+//     if(user_records.some((v)=>{return v.email==email}))
+//     {
+//     alert("duplicate data");
+//     }
+//     else
+//     {
+//       debugger
+//     user_records.push({
+//     "fname":fname,
+//     "lname":lname,
+//     "email":email,
+//     "psw":psw
+//     })
+//     localStorage.setItem("users",JSON.stringify(user_records));
+//   }}
+    
+
+  //   function submit(){
+  //  let ffname = document.getElementById("fname").value;
+  //   let llname = document.getElementById("lname").value;
+  //   let eemail = document.getElementById("email").value;
+  //   let ppass = document.getElementById("pass").value;
+
+  //   var ufname = localStorage.setItem("fname", fname);
+  //   var ulname = localStorage.setItem("lname", lname);
+  //   var uemail = localStorage.setItem("email", email);
+  //   var upass = localStorage.setItem("pass", pass);
+    
+  //   }
+  //   submit();
+
+    //   function submit(){
+
+    // // retreving data
+    // let fname = document.getElementById("fname");
+    // let lname = document.getElementById("lname");
+    // let email = document.getElementById("email");
+    // let pass = document.getElementById("password");
+
+    //     var ufname = localStorage.setItem("fname", fname.value);
+    //     var ulname = localStorage.setItem("lname", lname.value);
+    //     var uemail = localStorage.setItem("email", email.value);
+    //     var upasss = localStorage.setItem("pass", pass.value);
+
+    //   }
+
+//     $(document).ready(function() {
+//   $("#signup").submit(function() {
+//     var nm1 = $("#fname").val();
+//     var nm2 = $("#lname").val();
+//     var email = $("#email").val();
+//     var ps1 = $("#password").val();
+//     var city = $("#city").val();
+//     var state = $("#state").val();
+//     var zip = $("#zip").val();
+
+//     localStorage.setItem("#fname", nm1);
+//     localStorage.setItem("lname", nm2);
+//     localStorage.setItem("email", email);
+//     localStorage.setItem("ps1", ps1);
+//     localStorage.setItem("city", city);
+//     localStorage.setItem("state", state);
+//     localStorage.setItem("zip", zip);
+
+//     var storedName1 = localStorage.getItem("nm1");
+//     var storedName2 = localStorage.getItem("nm2")
+//     var storedEmail = localStorage.getItem("email");
+//     var storedPass = localStorage.getItem("ps1");
+//     var storedComment = localSotrage.getItem("city");
+//     var storedComment = localSotrage.getItem("state");
+//     var storedComment = localSotrage.getItem("zip");
+//   });
+// });
+</script>
+</html>

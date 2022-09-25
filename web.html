@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="dark">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c95138d394.js" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="web.css">
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon"  href="data:image/jpeg;base64,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">
+
+    <title>Shriffle Tech</title>
+</head>
+<body >
+    <!-- ////////////////////////////Navbar//////////////////////////////// -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light " >
+        <i class="material-icons">laptop</i>
+       
+        <a class="navbar-brand pr-4 " href="#"> <i class="fa-thin fa-"></i>
+            Shriffle Technologies</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  mr-auto " id="ul">
+            <li class="nav-item active pr-3">
+              <a class="nav-link" href="web.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active pr-3" href="aboutus">About</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link active pr-3" href="#">Service</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link active pr-3 " href="#">Gallery</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link active pr-3 " href="#">Contact</a>
+            </li>
+          </ul>
+        
+            <button class="btn btn-primary" id="onclick">Login<i class="fa-solid fa-user"></i></button>    
+
+        </div>
+      </nav>
+      <!-- ------------- Carousel ------------------ -->
+     
+    <div id="loaddata" > <h1></h1></div>
+
+      <!-- ///////////////////////////Carousel ///////////////////////////////// -->
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" style="max-height: 92vh;"  src="https://images.unsplash.com/photo-1537498425277-c283d32ef9db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQ1fHx0ZWNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="First slide">
+          </div>
+          
+        </div>
+      </div>
+      <hr>
+      <!-- ////////////////////////////////////////////////////////////////////// -->
+      <div class="container-fluid mx-4 mt-5" style="font-size: 32px; height: 90vh; ">
+        <h2 class="text-center .display4  " style="text-decoration: underline; font-weight:bold;">Services</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, suscipit minima. Quia sapiente excepturi harum impedit dicta ipsa, commodi est iusto temporibus corrupti vel accusamus cupiditate repudiandae vero, repellendus reiciendis fugit doloribus nemo earum assumenda facere explicabo. Dicta et, fuga cumque laudantium suscipit cum quis eaque possimus minima ratione, dolores nemo, voluptas numquam debitis veniam quam omnis autem excepturi officiis? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas cumque veniam mollitia? Esse exercitationem laboriosam doloribus consequuntur assumenda nesciunt mollitia alias quaerat inventore, quisquam asperiores adipisci magnam cum. Hic sit possimus itaque facilis? Quod id animi corrupti. Nostrum aperiam quos corporis. Molestias sequi facere inventore obcaecati quisquam labore, ut quos minus voluptatem voluptatibus rerum laborum, aperiam quasi voluptatum iusto dolores quidem et enim cumque perferendis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, consectetur tenetur! Eveniet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad minima odio laboriosam sit amet  Lorem ipsum dolor sit amet consectetur , sint perferendis exercitationem ratione aperiam minima. Officiis, rem?</p>
+      </div>
+      <hr>
+      <!-- Gallery -->
+      
+    <section class="key-features department mb-5">
+      <div class="container">
+          <div class="inner-title">
+
+              <h2 class="text-center "  style="text-decoration: underline; font-weight:bold;">Our Key Features</h2>
+              <p class="text-center">Take a look at some of our key features</p>
+          </div>
+
+          <div class="row ">
+              <div class="col-lg-4 col-md-6 ">
+                  <div class="single-key">
+                      <i class="fas fa-heartbeat"></i>
+                      <h5 >Frontend</h5>
+                      <p>Best care in India's preferred destination for comprehensive cardiac care from fifty plus years.</p>
+                  </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6">
+                  <div class="single-key">
+                      <i class="fas fa-ribbon"></i>
+                      <h5>Orthopaedic</h5>
+                      <p>offering the latest in Orthopedic treatments in India on par with the best centres in the world.</p>
+                  </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6">
+                  <div class="single-key">
+                      <i class="fab fa-monero"></i>
+                      <h5>NeuroScience</h5>
+                      <p>Neurosurgery a branch involved with the brain injury, spine and nerves, is a key specialty at Medicare hospitals.</p>
+                  </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6">
+                  <div class="single-key">
+                      <i class="fas fa-capsules"></i>
+                      <h5>Pharma Pipeline</h5>
+                      <p>Medicare Pharmacy is India's first, largest and most trusted branded pharmacy network, with over 4000 plus outlets.</p>
+                  </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6">
+                  <div class="single-key">
+                      <i class="fas fa-prescription-bottle-alt"></i>
+                      <h5>SpineSurgery</h5>
+                      <p>Medicare Hospitals is indeed a pioneer and one of the foremost institutions for spine surgery.</p>
+                  </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6">
+                  <div class="single-key">
+                      <i class="far fa-thumbs-up"></i>
+                      <h5>High Quality treatments</h5>
+                      <p>The department of critical care medicine at Apollo Hospitals, India is a combination of many specialties and technologies.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <hr>
+    
+    <!-- ---------------Blog--------------------- -->
+    <section class="our-blog" >
+      <div class="container">
+        <div class="inner-title">
+
+            <h2 class="text-center mb-4"  style="text-decoration: underline; font-weight:bold;">Our Blog</h2>
+            <p class="text-center">What people say about us</p>
+        </div>
+          <div class="blog-row row">
+              <div class="col-lg-4 col-md-6">
+                  <div class="single-blog">
+                      <figure>
+                          <img style="height: 200px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDvAWlR3pn9SXiBoteEo6f3yLqPG0e6SVnVQ&usqp=CAU" alt="">
+                      </figure>
+                      <div class="blog-detail">
+                          <small>By Admin | August 10 2018</small>
+                          <h4>Is Heart Disease More Prevalent in Young People?</h4>
+                          <p>Mr. Raju, a 24-year-old gentleman, complained of severe chest pain and was taken to a general physician, thought to have acidity, and given medications, but had no relief. An ECG was done,
+                              which showed ST elevation in precordial leads, indicating a massive heart attack. He was rushed to our hospital, 
+                              where an angiography was done immediately, and it revealed a 100% block in the LAD artery for which he required stenting. He made an uneventful recovery.</p>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="col-lg-4 col-md-6">
+                  <div class="single-blog">
+                      <figure>
+                          <img style="width: 100%; height: 200px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7GXwEcEBVQc1VhcO5-biNSZIVhHutMjHbyQ&usqp=CAU" alt="">
+                      </figure>
+                      <div class="blog-detail">
+                          <small>By Admin | August 10 2018</small>
+                          <h4>Types of Asthma</h4>
+                          <p>The common allergens that can trigger symptoms of Asthma in an individual are pollen; animal dander such as feathers, hair, 
+                              faeces, feathers, animal saliva, cockroach faeces, dust mites, faeces, and mould spores. Certain food items like milk, eggs, 
+                              tree nuts, peanuts, seafood, wheat and soybeans are also known to cause allergies.<br>
+                          Some people may develop symptoms at the change of season due to variations in temperatures and humidity. This is called seasonal Asthma.</p>
+                      </div>
+                  </div>
+              </div>
+                  <div class="col-lg-4 col-md-6">
+                  <div class="single-blog">
+                      <figure>
+                          <img style="height: 200px;"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwZQK3z0syFpNVvGfBxZiThCp6JAgTHWdN4g&usqp=CAU" alt="">
+                      </figure>
+                      <div class="blog-detail">
+                          <small>By Admin | August 10 2018</small>
+                          <h4>The liver is one of the vital organs in the human body?</h4>
+                          <p> The liver is one of the vital organs in the human body. Unlike other organs in the body, the liver has a huge reserve, 
+                              and physical signs and symptoms of liver disease arise only when most of the liver gets damaged.The common symptoms of liver disease are jaundice (yellow colour of eyes),
+                              loss of appetite/aversion to food, feeling of weakness and lethargy, abnormal bleeding occurring after minor trauma.
+                          GI bleeding and encephalopathy are symptoms of advanced liver disease. </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+ 
+     
+<!-- ------------Footer----------------------- -->
+<hr>
+<footer class="footer bg-blue " style="background-color: cyan;">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4 col-sm-12">
+              <h2>About Us</h2>
+              <p>
+                 MediCare Group has over two decades of experience in the healthcare sector, and is known for providing quality healthcare and valuable experience to all domestic and international patients. Our healthcare offerings 
+                 are supported by a team of compassionate and dedicated medical professionals who have rich knowledge and experience in their respective domains.</p>
+          </div>
+          <div class="col-md-4 col-sm-12">
+              <h2>Useful Links</h2>
+              <ul class="list-unstyled link-list">
+                  <li><a ui-sref="about" href="#/about">About us</a><i class="fa fa-angle-right"></i></li>
+                  <li><a ui-sref="portfolio" href="#/portfolio">Portfolio</a><i class="fa fa-angle-right"></i></li>
+                  <li><a ui-sref="products" href="#/products">Latest jobs</a><i class="fa fa-angle-right"></i></li>
+                  <li><a ui-sref="gallery" href="#/gallery">Gallery</a><i class="fa fa-angle-right"></i></li>
+                  <li><a ui-sref="contact" href="#/contact">Contact us</a><i class="fa fa-angle-right"></i></li>
+              </ul>
+          </div>
+          <div class="col-md-4 col-sm-12 map-img">
+              <h2>Contact Us</h2>
+              <address class="md-margin-bottom-40">
+                  MediCare <br>
+                  Indore (Indore District) <br>
+                  Madhya Pradesh, IND <br>
+                  Phone: +91 9159669599 <br>
+                  Email: <a href="mailto:info@anybiz.com" class="">info@MediCare.in</a><br>
+                  Web: <a href="smart-eye.html" class="">www.MediCare.in</a>
+              </address>
+          </div>
+      </div>
+  </div>
+</footer>
+<!-- ------------------------- -->
+
+</body>
+<script>
+  $(document).ready(function(){
+        $('#onclick').click(function(){
+            $("#loaddata").load('login.html',function(){
+            });
+        })
+    })
+</script>
+</html>

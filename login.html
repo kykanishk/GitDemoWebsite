@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <form>
+        <!-- Email input -->
+        <div class="form-outline mb-4 mx-4 mt-5">
+          <input type="email" id="email" class="form-control" />
+          <label class="form-label" for="pass">Email address</label>
+        </div>
+      
+        <!-- Password input -->
+        <div class="form-outline mb-4 mx-4 ">
+          <input type="password" id="pass" class="form-control" />
+          <label class="form-label" for="form2Example2">Password</label>
+        </div>
+      
+        <!-- 2 column grid layout for inline styling -->
+        <div class="row mb-4">
+          <div class="col d-flex justify-content-center">
+            <!-- Checkbox -->
+            <div class="form-check">
+            </div>
+          </div>
+      
+          <div class="col">
+            <!-- Simple link -->
+                      </div>
+        </div>
+      
+        <!-- Submit button -->
+        <button type="button" class="btn btn-primary btn-block mb-4 mx-4" onclick="login()">Sign in</button>
+      
+        <!-- Register buttons -->
+        <div class="text-center" id="register">
+          <p>Not a member? <a href="#">Register</a></p>
+         
+          <button type="button" class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+      
+          <button type="button" class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-google"></i>
+          </button>
+      
+          <button type="button" class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-twitter"></i>
+          </button>
+      
+          <button type="button" class="btn btn-link btn-floating mx-1 ">
+            <i class="fab fa-github"></i>
+          </button>
+        </div>
+      </form>
+      <div id="loaddata"> <h1></h1></div>
+
+</body>
+ <script>
+    $(document).ready(function(){
+        $('#register').click(function(){
+            $("#loaddata").load('Local.html',function(){
+            });
+        })
+    })
+    // -------------- login using local storage
+    function login(){
+    let email = document.getElementById("email").value;
+    let pass = document.getElementById("pass").value;
+
+    var check = localStorage.getItem("users");
+    for(let i =0; i<2; i++){
+      if(email == check.email.value && pass == check.psw.value){
+        window.alert("user login successfulley");
+      }
+      else{
+        window.alert("enter correct details")
+      }
+    }
+  }
+  login()
+ </script>
+</html>
